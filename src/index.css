@@ -1,0 +1,144 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* Animation Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+@keyframes float-slower {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Animation Classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+.animate-float-slower {
+  animation: float-slower 10s ease-in-out infinite;
+}
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+}
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out forwards;
+}
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out forwards;
+}
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out forwards;
+}
+/* Animation Delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+/* 3D Effects */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+/* Card Hover Effects */
+.hover-card {
+  transition: all 0.3s ease;
+}
+.hover-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+/* Gradient Text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600;
+}
+/* Glass Effect */
+.glass-effect {
+  @apply backdrop-blur-md bg-white/30 border border-white/20;
+}
+/* Custom Shadows */
+.shadow-3d {
+  box-shadow: 
+    0 10px 20px rgba(0,0,0,0.19), 
+    0 6px 6px rgba(0,0,0,0.23);
+}
+.shadow-3d-hover:hover {
+  box-shadow: 
+    0 19px 38px rgba(0,0,0,0.30), 
+    0 15px 12px rgba(0,0,0,0.22);
+}
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+/* Image Hover Effects */
+.image-scale {
+  transition: transform 0.6s ease;
+}
+.image-scale:hover {
+  transform: scale(1.05);
+}
+/* Button Effects */
+.button-3d {
+  transition: all 0.2s ease;
+  transform: translateY(0);
+}
+.button-3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+}
+.button-3d:active {
+  transform: translateY(1px);
+}
